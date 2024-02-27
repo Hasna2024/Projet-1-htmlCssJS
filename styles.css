@@ -1,0 +1,123 @@
+body {
+  font-family: Arial, sans-serif;
+  background-image: linear-gradient(to top right, #76b947, #0e98ba);
+}
+
+header {
+  text-align: center;
+  padding: 20px 0;
+  /* add some space at the top and bottom of the header */
+}
+
+header h1 {
+  margin: 0;
+  font-size: 48px;
+  color: white;
+}
+
+header nav {
+  margin: 0;
+  display: inline-block;
+  /* make the nav element inline so it can be centered along with the h1 element */
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header nav li {
+  display: inline;
+  margin: 0 5px;
+}
+
+header nav a {
+  text-decoration: none;
+}
+
+nav {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  border: 2px solid white;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin-right: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+main section {
+  flex: 1;
+  margin-right: 20px;
+}
+
+main h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+main p {
+  margin-bottom: 20px;
+}
+
+main h3 {
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+main ul {
+  padding-left: 20px;
+}
+
+main img {
+  max-width: 100%;
+  height: auto;
+}
+
+.black-box {
+  background-color: black;
+  border-radius: 10px;
+  border: 2px solid white;
+  color: white;
+  padding: 30px;
+  max-width: 600px;
+}
+
+form {
+  background-color: black;
+  border-radius: 10px;
+  border: 2px solid white;
+  color: white;
+  padding: 30px;
+  width: 600px;
+  margin-bottom: 60px;
+}
+
+form .form-btn {
+  display: flex;
+  justify-content: space-around;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
