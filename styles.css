@@ -1,24 +1,27 @@
 body {
   font-family: Arial, sans-serif;
-  background-image: linear-gradient(to top right, #76b947, #0e98ba);
+  background-image: linear-gradient(to top right, #76b947, #7b5cba);
 }
 
 header {
   text-align: center;
   padding: 20px 0;
-  /* add some space at the top and bottom of the header */
+  margin-bottom: 24px;
 }
 
 header h1 {
   margin: 0;
   font-size: 48px;
   color: white;
+  text-align: center;
 }
 
 header nav {
-  margin: 0;
+  margin: px;
   display: inline-block;
   /* make the nav element inline so it can be centered along with the h1 element */
+  margin-left: 50px;
+  width: auto;
 }
 
 header nav ul {
@@ -29,7 +32,7 @@ header nav ul {
 
 header nav li {
   display: inline;
-  margin: 0 5px;
+  margin: 0 20px;
 }
 
 header nav a {
@@ -41,6 +44,8 @@ nav {
   color: white;
   padding: 10px;
   border: 2px solid white;
+  float: left;
+  /* margin-bottom: 24px; */
 }
 
 nav ul {
@@ -108,8 +113,11 @@ form {
   border: 2px solid white;
   color: white;
   padding: 30px;
-  width: 600px;
+  width: 500px;
   margin-bottom: 60px;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 form .form-btn {
@@ -120,4 +128,64 @@ form .form-btn {
 .container {
   display: flex;
   justify-content: center;
+}
+form img {
+  max-width: 40px;
+  align-items: center;
+  width: 25vh;
+}
+
+.circle {
+  margin: 2px auto;
+  width: 50px;
+  border: 2px solid white;
+  height: 50px;
+  text-align: center;
+  border-radius: 50px;
+  line-height: 50px;
+}
+
+#container {
+  max-width: 100%;
+  height: auto;
+}
+
+#selectBox {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#imageContainer {
+  text-align: center;
+  bottom: 50;
+  left: 0;
+  width: 100%;
+}
+
+#displayedImage {
+  max-width: 100%;
+  max-height: 100px; /* Ajustez la hauteur maximale selon vos besoins */
+  display: inline-block;
+}
+body h2 {
+  margin: 0;
+  font-size: 30px;
+  color: white;
+  text-align: center;
+}
+.btn-primary {
+  background-color: rgb(220, 225, 198) !important;
+  color: black !important;
+  border: 1px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+form img {
+  text-align: center;
+  margin-bottom: 3px;
+}
+
+.container table {
+  margin-bottom: 12px;
 }

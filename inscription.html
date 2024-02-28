@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Page d'inscription</title>
+  <!-- Add Bootstrap CSS -->
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</head>
+
+<header>
+  <h1>ENI - MEMORY - S'inscrire</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="inscription.html">S'inscrire</a></li>
+      <li><a href="connection.html">Se connecter</a></li>
+      <li><a href="profil.html">Profil</a></li>
+      <li><a href="jouer.html">Jouer</a></li>
+    </ul>
+  </nav>
+</header>
+
+<body>
+  <div class="container mt-5">
+    <form data-bs-theme="dark" id="registrationForm" class="needs-validation" novalidate>
+      <h1 class="text-center mb-4">Inscrivez-vous</h1>
+      <div class="mb-3">
+        <label for="username">Nom d'utilisateur</label>
+        <input type="text" class="form-control" id="username" name="username" required minlength="3" />
+        <div class="invalid-feedback">
+          Le nom d'utilisateur doit contenir au moins 3 caractères.
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Entrez votre E-mail</label>
+        <input type="email" class="form-control" id="email" required />
+        <div class="invalid-feedback">
+          Veuillez saisir une adresse e-mail valide.
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="password" class="form-label">Votre mot de passe</label>
+        <input type="password" class="form-control" id="password" required minlength="6" />
+        <small id="passwordHelp" class="form-text text-muted">Niveau de difficulté du mot de passe :
+          <span id="passwordStrength"></span></small>
+        <div class="invalid-feedback">
+          Le mot de passe doit contenir au moins 6 caractères.
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="confirmPassword" class="form-label">Confirmez le mot de passe</label>
+        <input type="password" class="form-control" id="confirmPassword" required />
+        <div class="invalid-feedback">
+          Les mots de passe ne correspondent pas.
+        </div>
+      </div>
+      <div class="form-btn">
+        <button type="submit" class="btn btn-primary">
+          Création du compte
+        </button>
+        <button type="reset" class="btn btn-primary">Annuler</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="inscription.js"></script>
+</body>
+
+</html>
