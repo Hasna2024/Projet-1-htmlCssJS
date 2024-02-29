@@ -71,8 +71,87 @@
     </form>
   </div>
 
-  <script src="script.js"></script>
-  <script src="inscription.js"></script>
+  <script>
+    (function () {
+      "use strict";
+      var form = document.getElementById("registrationForm");
+      form.addEventListener("submit", function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault();
+          event.stopPropagation();
+          return;
+        }
+
+        var username = document.getElementById("username").value;
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("confirmPassword").value;
+
+        if (username.length < 3) {
+          alert("Le nom d'utilisateur doit contenir au moins 3 caractères.");
+          event.preventDefault();
+          return;
+        }
+
+        if (!validateEmail(email)) {
+          alert("Veuillez saisir une adresse e-mail valide.");
+          event.preventDefault();
+          return;
+        }
+
+        if (password !== confirmPassword) {
+          alert("Les mots de passe ne correspondent pas.");
+          event.preventDefault();
+          return;
+        }
+
+        var passwordStrength = checkPasswordStrength(password);
+
+        if (passwordStrength === "faible") {
+          alert("Le mot de passe est faible. Il doit contenir au moins 6 caractères.");
+          event.preventDefault();
+          return;
+        }
+
+        var users = JSON.parse(localStorage.getItem("users")) || [];
+        var existingUser = users.find(function (u) {
+          return u.email === email;
+        });
+
+        if (existingUser) {
+          alert("Cet email est déjà utilisé pour un autre compte.");
+          event.preventDefault();
+          return;
+        }
+
+        var user = { username: username, email: email, password: password };
+        users.push(user);
+        localStorage.setItem("users", JSON.stringify(users));
+        console.log(users);
+
+        window.location.replace("connection.html");
+        event.preventDefault();
+      }, false);
+    })();
+
+    function validateEmail(email) {
+      var re = /\S+@\S+\.\S+/;
+      return re.test(email);
+    }
+
+    function checkPasswordStrength(password) {
+      if (password.length < 6) {
+        return "faible";
+      } else if (password.length < 10 && /[0-9!@#$%^&*(),.?":{}|<>]/.test(password)) {
+        return "moyen";
+      } else if (password.length >= 10 && /[0-9]/.test(password) && /[!@#$%^&*(),.?":{}|<>]/.test(password)) {
+        return "fort";
+      } else {
+        return "faible";
+      }
+    }
+  </script>
+  <script src="script.js"></script>;
 </body>
 
 </html>

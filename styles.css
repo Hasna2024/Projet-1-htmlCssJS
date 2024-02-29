@@ -1,5 +1,6 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Söhne", -apple-system, BlinkMacSystemFont, Helvetica, sans-serif,
+    sans-serif;
   background-image: linear-gradient(to top right, #76b947, #7b5cba);
 }
 
@@ -11,7 +12,7 @@ header {
 
 header h1 {
   margin: 0;
-  font-size: 48px;
+  font-size: 44px;
   color: white;
   text-align: center;
 }
@@ -76,16 +77,16 @@ main section {
 }
 
 main h2 {
-  font-size: 24px;
+  font-size: 22px;
   margin-bottom: 10px;
 }
 
 main p {
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 main h3 {
-  font-size: 18px;
+  font-size: 16px;
   margin-top: 20px;
 }
 
@@ -94,8 +95,9 @@ main ul {
 }
 
 main img {
-  max-width: 100%;
+  max-width: 55%;
   height: auto;
+  margin: 0% 25%;
 }
 
 .black-box {
@@ -117,7 +119,6 @@ form {
   margin-bottom: 60px;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
 form .form-btn {
