@@ -13,13 +13,13 @@ body {
 
 .memory-game {
   width: 500px;
-  height: 900px;
+  /* height: 900px; */
   margin: auto;
   display: flex;
   flex-wrap: wrap;
   perspective: 1000px;
   background: black;
-  padding: 15px;
+  padding: 24px;
   border-radius: 12px;
 }
 #policeJ {
@@ -30,8 +30,8 @@ body {
 }
 .memory-card {
   width: calc(25% - 10px);
-  height: calc(220px - 0.1px);
-  margin: 5px;
+  height: calc(100px - 0.1px);
+  margin: 4px;
   position: relative;
   transform: scale(1);
   transform-style: preserve-3d;
@@ -51,7 +51,10 @@ body {
 .front-face,
 .back-face {
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
+  /* height: 120px; */
+  /* width: 120px; */
+
   padding: 20px;
   position: absolute;
   border-radius: 5px;

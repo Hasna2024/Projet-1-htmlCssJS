@@ -168,12 +168,14 @@ form img {
   max-height: 100px; /* Ajustez la hauteur maximale selon vos besoins */
   display: inline-block;
 }
+
 body h2 {
   margin: 0;
   font-size: 30px;
   color: white;
   text-align: center;
 }
+
 .btn-primary {
   background-color: rgb(220, 225, 198) !important;
   color: black !important;
@@ -182,6 +184,7 @@ body h2 {
   border-radius: 5px;
   cursor: pointer;
 }
+
 form img {
   text-align: center;
   margin-bottom: 3px;
